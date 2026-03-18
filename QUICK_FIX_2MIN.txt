@@ -1,0 +1,35 @@
+# 🚀 QUICK FIX - 2 MINUTES
+
+## You Just Saw: "Claude's response was interrupted" ❌
+
+## Why: Claude cached the old config before we fixed it
+
+## The Fix (Copy/Paste into PowerShell):
+
+```powershell
+# Kill Claude
+Get-Process Claude -EA 0 | Stop-Process -Force
+
+# Wait
+Start-Sleep 5
+
+# Clear cache
+Remove-Item "$env:LOCALAPPDATA\Claude" -Recurse -Force -EA 0
+
+# Done!
+Write-Host "✅ DONE! Open Claude Desktop now." -ForegroundColor Green
+```
+
+## Then:
+1. Open Claude Desktop
+2. New Chat
+3. Paste: `Generate a JMeter test plan for https://httpbin.org/get with 10 concurrent users for 30 seconds`
+
+## Result:
+You should see Claude call the `generate_test_plan` tool ✅
+
+---
+
+**That's it! Do this right now!**
+
+

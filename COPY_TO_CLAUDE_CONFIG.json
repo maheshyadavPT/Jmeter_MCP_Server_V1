@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "jmeter": {
+      "command": "python",
+      "args": ["D:\\Jmeter_MCP_NEW\\server.py"],
+      "env": {
+        "JMETER_HOME": "D:\\Program Files\\Jmeter\\apache-jmeter-5.6.3",
+        "PYTHONPATH": "D:\\Jmeter_MCP_NEW"
+      }
+    }
+  }
+}
+

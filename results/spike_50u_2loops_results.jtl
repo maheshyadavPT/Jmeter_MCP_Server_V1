@@ -1,0 +1,2 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1773775880465,3805,GET /countries/countries,200,OK,Users - 50 Concurrent 1-1,text,true,,122312,197,1,1,https://api.sampleapis.com/countries/countries,2881,0,1810

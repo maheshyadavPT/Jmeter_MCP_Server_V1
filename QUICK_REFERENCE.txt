@@ -1,0 +1,222 @@
+# 📱 QUICK REFERENCE CARD
+
+## ⚡ One-Minute Summary
+
+**Your Problem:**
+- Claude says "No JMeter skill"
+- Python isn't in PATH
+- Server needs to be configured
+
+**Your Solution:**
+1. Install Python (5 min)
+2. Run `pip install -r requirements.txt` (1 min)
+3. Create Claude config file (2 min)
+4. Run `python server.py` (keep running!)
+5. Restart Claude Desktop
+6. Test with a prompt
+
+**Expected Outcome:**
+- See `[Tool: generate_test_plan]` in Claude's response
+- Files created in `test_plans/` folder
+- Everything works naturally through Claude chat
+
+---
+
+## 🔑 Key Commands
+
+```powershell
+# Check Python installed
+python --version
+
+# Install dependencies
+cd D:\Jmeter_MCP_NEW
+pip install -r requirements.txt
+
+# Start server (KEEP WINDOW OPEN)
+python server.py
+
+# Should see:
+# JMeter MCP Server started. Waiting for MCP client...
+```
+
+---
+
+## 📍 Key File Locations
+
+| What | Where |
+|------|-------|
+| Claude Config | `%APPDATA%\Claude\claude_desktop_config.json` |
+| Server Code | `D:\Jmeter_MCP_NEW\server.py` |
+| JMeter | `D:\Program Files\Jmeter\apache-jmeter-5.6.3` |
+| Generated Plans | `D:\Jmeter_MCP_NEW\test_plans\` |
+| Results | `D:\Jmeter_MCP_NEW\results\` |
+
+---
+
+## ✅ 6-Step Quick Checklist
+
+```
+[ ] 1. Install Python (python.org) - 5 min
+[ ] 2. Run: pip install -r requirements.txt - 1 min
+[ ] 3. Create Claude config file - 2 min
+[ ] 4. Run: python server.py - 0.5 min
+[ ] 5. Restart Claude completely - 1 min
+[ ] 6. Test with a prompt - 1 min
+
+Total: ~10 minutes
+```
+
+---
+
+## 🎯 What Claude Config Should Look Like
+
+**File:** `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "jmeter": {
+      "command": "py",
+      "args": [
+        "D:\\Jmeter_MCP_NEW\\server.py"
+      ],
+      "env": {
+        "JMETER_HOME": "D:\\Program Files\\Jmeter\\apache-jmeter-5.6.3",
+        "PYTHONPATH": "D:\\Jmeter_MCP_NEW"
+      }
+    }
+  }
+}
+```
+
+**Key Points:**
+- Double backslashes: `\\` not `\`
+- All paths must exist on your computer
+- Save as `.json` file (not `.txt`)
+
+---
+
+## 🚨 Troubleshooting Flowchart
+
+```
+Does python work?
+├─ NO  → Install Python (python.org)
+│        Restart computer
+│        Test: python --version
+└─ YES → Continue
+
+Dependencies installed?
+├─ NO  → pip install -r requirements.txt
+└─ YES → Continue
+
+Server running?
+├─ NO  → python server.py
+│        See "Waiting for MCP client..."
+└─ YES → Continue
+
+Claude restarted?
+├─ NO  → Close Claude completely
+│        Wait 5 sec
+│        Reopen Claude
+└─ YES → Continue
+
+Created NEW chat?
+├─ NO  → Click "New chat" button
+└─ YES → Continue
+
+Type test prompt → See [Tool: generate_test_plan]?
+├─ YES → 🎉 SUCCESS!
+└─ NO  → Check config file at %APPDATA%\Claude\
+         Verify paths are correct
+```
+
+---
+
+## 📝 Test Prompt
+
+**Type this in Claude (in NEW chat):**
+```
+Generate a JMeter test plan for https://httpbin.org/get with 10 concurrent users for 30 seconds
+```
+
+**Expected Result:**
+- See: `[Tool: generate_test_plan]`
+- See: File created message
+- File location: `D:\Jmeter_MCP_NEW\test_plans\test_plan_XXXX.jmx`
+
+**If it works:** You're done! 🎉
+
+**If not:** Restart server & Claude, create new chat, try again
+
+---
+
+## 🔧 Emergency Restart
+
+If something seems broken:
+
+```powershell
+# 1. Stop server (Ctrl+C in server terminal)
+# 2. Wait 3 seconds
+# 3. Start server again
+python server.py
+
+# 4. Close Claude completely
+# 5. Wait 5 seconds
+# 6. Reopen Claude
+# 7. Create NEW chat
+# 8. Test again
+```
+
+---
+
+## 📚 Documentation Quick Links
+
+| Need | Read This |
+|------|-----------|
+| Step-by-step | `DO_THIS_NOW.md` |
+| Python help | `PYTHON_SETUP_REQUIRED.md` |
+| Config help | `CLAUDE_DESKTOP_CONFIG_GUIDE.md` |
+| Full guide | `MASTER_README.md` |
+| Diagrams | `VISUAL_WORKFLOW.md` |
+| Navigation | `INDEX.md` |
+
+---
+
+## ⏱️ Time Breakdown
+
+| Step | Time |
+|------|------|
+| Python install | 5 min |
+| Install deps | 1 min |
+| Config file | 2 min |
+| Start server | 30 sec |
+| Restart Claude | 1 min |
+| Test | 1 min |
+| **TOTAL** | **~10 min** |
+
+---
+
+## ✨ Success Indicators
+
+- ✅ Terminal shows: "JMeter MCP Server started. Waiting for MCP client..."
+- ✅ Claude shows: `[Tool: generate_test_plan]`
+- ✅ File created: `test_plan_XXXX.jmx` in `test_plans` folder
+- ✅ File contains XML content (open in Notepad to verify)
+
+**See all 4? You're good to go!** 🚀
+
+---
+
+## 📞 If Stuck
+
+**Read this file in order:**
+1. DO_THIS_NOW.md
+2. Specific help file for your issue
+3. MASTER_README.md if still confused
+
+---
+
+**You have everything you need. Start with `DO_THIS_NOW.md`!** 💪
+
+*All documentation files are in D:\Jmeter_MCP_NEW*
+

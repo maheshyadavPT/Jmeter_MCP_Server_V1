@@ -1,0 +1,91 @@
+# ⚡ QUICK REFERENCE - JMETER MCP
+
+## STATUS: ✅ READY TO TEST
+
+---
+
+## THE 3-STEP TEST (60 seconds)
+
+1. **Open Claude Desktop** (10 sec)
+2. **New Chat** button (5 sec)
+3. **Paste this:**
+   ```
+   Generate a JMeter test plan for https://httpbin.org/get with 10 concurrent users for 30 seconds
+   ```
+   (45 sec to see response)
+
+---
+
+## EXPECTED RESPONSE
+
+```
+I can see the JMeter tools available!
+
+✅ Test plan generated: ...test_plan_*.jmx
+Configuration:
+  • URL: https://httpbin.org/get
+  • Users: 10 concurrent
+  • Duration: 30 seconds
+```
+
+---
+
+## LOCATIONS
+
+| Item | Path |
+|------|------|
+| **Config** | `%APPDATA%\Claude\claude_desktop_config.json` |
+| **Server** | `D:\Jmeter_MCP_NEW\server.py` |
+| **Test Plans** | `D:\Jmeter_MCP_NEW\test_plans\` |
+| **Results** | `D:\Jmeter_MCP_NEW\results\` |
+| **JMeter** | `D:\Program Files\Jmeter\apache-jmeter-5.6.3` |
+
+---
+
+## TOOLS AVAILABLE
+
+- `generate_test_plan` - Create .jmx files
+- `run_test` - Execute tests
+- `parse_results` - Analyze .jtl files
+- `compare_runs` - Compare two test runs
+- `list_test_plans` - Show all test files
+- `list_results` - Show all result files
+
+---
+
+## IF "NO JMETER SKILL" MESSAGE
+
+Clear cache:
+```powershell
+Remove-Item "$env:LOCALAPPDATA\Claude" -Recurse -Force
+Remove-Item "$env:APPDATA\Claude" -Recurse -Force
+```
+Then restart Claude Desktop.
+
+---
+
+## WHAT WAS FIXED
+
+✅ Config moved to: `%APPDATA%\Claude\`
+✅ Command changed to: `"py"`
+✅ Cache cleared
+✅ All modules verified
+
+---
+
+## STATUS
+
+- **Config:** ✅ Correct
+- **MCP:** ✅ 1.26.0
+- **Python:** ✅ 3.14
+- **JMeter:** ✅ 5.6.3
+- **Cache:** ✅ Cleared
+- **Server:** ✅ Ready
+
+---
+
+## NEXT STEP
+
+Open Claude Desktop NOW and test!
+
+

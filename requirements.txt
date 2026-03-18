@@ -1,0 +1,15 @@
+# requirements.txt — JMeter MCP Server dependencies
+#
+# Install all with:
+#   pip install -r requirements.txt
+#
+# Python 3.11+ required (for `str | None` type hints)
+
+# ── Core MCP SDK ──────────────────────────────────────────────────────
+# The official Python SDK for the Model Context Protocol.
+# Provides: Server, stdio_server, types (Tool, TextContent, etc.)
+mcp>=1.0.0
+
+# ── No other external dependencies needed ────────────────────────────
+# All other modules used (os, sys, csv, json, subprocess, re,
+# datetime, asyncio, collections) are part of Python's standard library.

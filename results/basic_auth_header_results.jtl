@@ -1,0 +1,9 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1773749926904,2691,GET /basic-auth/user/passwd,401,UNAUTHORIZED,Users - 10 Concurrent 1-1,,false,Test failed: code expected to contain /2[0-9][0-9]/,250,193,4,4,https://httpbin.org/basic-auth/user/passwd,2677,0,2357
+1773749928727,1969,GET /basic-auth/user/passwd,401,UNAUTHORIZED,Users - 10 Concurrent 1-3,,false,Test failed: code expected to contain /2[0-9][0-9]/,250,193,5,5,https://httpbin.org/basic-auth/user/passwd,1969,0,942
+1773749930105,590,GET /basic-auth/user/passwd,401,UNAUTHORIZED,Users - 10 Concurrent 1-1,,false,Test failed: code expected to contain /2[0-9][0-9]/,250,193,5,5,https://httpbin.org/basic-auth/user/passwd,590,0,0
+1773749931198,696,GET /basic-auth/user/passwd,401,UNAUTHORIZED,Users - 10 Concurrent 1-1,,false,Test failed: code expected to contain /2[0-9][0-9]/,250,193,5,5,https://httpbin.org/basic-auth/user/passwd,696,0,0
+1773749931198,696,GET /basic-auth/user/passwd,401,UNAUTHORIZED,Users - 10 Concurrent 1-3,,false,Test failed: code expected to contain /2[0-9][0-9]/,250,193,5,5,https://httpbin.org/basic-auth/user/passwd,696,0,0
+1773749927728,4503,GET /basic-auth/user/passwd,401,UNAUTHORIZED,Users - 10 Concurrent 1-2,,false,Test failed: code expected to contain /2[0-9][0-9]/,250,193,3,3,https://httpbin.org/basic-auth/user/passwd,4503,0,4165
+1773749929720,3431,GET /basic-auth/user/passwd,401,UNAUTHORIZED,Users - 10 Concurrent 1-4,,false,Test failed: code expected to contain /2[0-9][0-9]/,250,193,2,2,https://httpbin.org/basic-auth/user/passwd,3431,0,3125
+1773749930721,2943,GET /basic-auth/user/passwd,401,UNAUTHORIZED,Users - 10 Concurrent 1-5,,false,Test failed: code expected to contain /2[0-9][0-9]/,250,193,1,1,https://httpbin.org/basic-auth/user/passwd,2943,0,2636
