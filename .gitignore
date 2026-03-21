@@ -1,3 +1,44 @@
-node_modules/\n.env\n*.log\n__pycache__/
+# ── Python ────────────────────────────────────────────────────
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── JMeter generated outputs ──────────────────────────────────
+results/*.jtl
+results/*_report/
+*.log
+jmeter.log
+
+# ── IntelliJ / IDE ────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea/workspace.xml
+.idea/tasks.xml
+
+# ── OS files ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Node (from Claude Desktop cache) ─────────────────────────
+node-compile-cache/
+node_modules/
+
+# ── Temp / misc ───────────────────────────────────────────────
+*.tmp
+*.bak
+*.swp
+uv-*.lock
+phantomjs/
+
+# ── Keep results folder but ignore contents ───────────────────
+!results/.gitkeep
